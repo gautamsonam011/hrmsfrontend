@@ -22,10 +22,7 @@ export default function AttendanceList() {
       .then((res) => setEmployees(res.data.data || []))
       .catch(() => setError("Failed to load employees"));
   }, []);
-
-  useEffect(() => {
-  fetchAttendance();
-}, []);
+ 
 
   const fetchAttendance = async () => {
     setLoading(true);
@@ -45,6 +42,10 @@ export default function AttendanceList() {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+  fetchAttendance();
+}, [fetchAttendance]);
 
   const handleChange = (e) => {
     setFilters({ ...filters, [e.target.name]: e.target.value });
@@ -104,11 +105,10 @@ export default function AttendanceList() {
                   <td>{record.date}</td>
                   <td>
                     <span
-                      className={`status-badge ${
-                        record.status === "present"
+                      className={`status-badge ${record.status === "present"
                           ? "status-present"
                           : "status-absent"
-                      }`}
+                        }`}
                     >
                       {record.status}
                     </span>
