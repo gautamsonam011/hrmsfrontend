@@ -20,7 +20,6 @@ export default function Attendance() {
   const submitAttendance = async () => {
     if (!data.employee_id) {
       alert("Please select employee");
-      navigate("/attendance");
       return;
     }
 

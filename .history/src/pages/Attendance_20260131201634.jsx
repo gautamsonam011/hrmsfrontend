@@ -99,7 +99,7 @@ export default function AttendanceList() {
               {attendance.map((record) => (
                 <tr key={record.id}>
                   <td>
-                    {record.employee_code}
+                    {record.employee_id} – {record.full_name}
                   </td>
                   <td>{record.date}</td>
                   <td>

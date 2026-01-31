@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { getEmployees } from "../api/employeeApi";
 import { markAttendance } from "../api/attendanceApi";
-import { useNavigate } from "react-router-dom";
 
 export default function Attendance() {
   const [employees, setEmployees] = useState([]);
@@ -9,7 +8,6 @@ export default function Attendance() {
     employee_id: "",
     status: "present",
   });
-  const navigate = useNavigate();
 
   useEffect(() => {
     getEmployees().then((res) => {
@@ -20,7 +18,6 @@ export default function Attendance() {
   const submitAttendance = async () => {
     if (!data.employee_id) {
       alert("Please select employee");
-      navigate("/attendance");
       return;
     }
 
@@ -44,7 +41,7 @@ export default function Attendance() {
   return (
     <div className="attendance-page">
       <div className="attendance-card">
-        <h2 className="employee-form-title">Mark Attendance</h2>
+        <h2 className="attendance-title">Mark Attendance</h2>
 
         {/* Employee */}
         <div className="attendance-group">
