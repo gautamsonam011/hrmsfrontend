@@ -1,0 +1,166 @@
+
+/* Global */
+body {
+  margin: 0;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont;
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+/* Page wrapper */
+.page {
+  padding: 24px;
+}
+
+/* Card */
+.card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Headings */
+.page-title {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+/* Buttons */
+.btn {
+  padding: 10px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn-primary {
+  background-color: #2563eb;
+  color: white;
+}
+
+.btn-danger {
+  background-color: #dc2626;
+  color: white;
+}
+
+.btn-secondary {
+  background-color: #e5e7eb;
+}
+
+/* Inputs */
+.input,
+.select {
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 14px;
+  width: 100%;
+}
+
+.input:focus,
+.select:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.table {
+  width: 90%;
+  border-collapse: collapse;
+  margin-top: 50px;
+  margin:30px;
+  background-color:#f8fcfc
+}
+
+.table th {
+  text-align: left;
+  background: #f3f4f6;
+  padding: 12px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.table td {
+  padding: 12px;
+  border-bottom: 1px solid #e5e7eb;
+  font-size: 14px;
+}
+
+.table tr:hover {
+  background-color: #f9fafb;
+}
+
+/* ===== Add Employee Form ===== */
+.employee-form-wrapper {
+  display: flex;
+  justify-content: center;
+  padding: 32px 16px;
+}
+
+.employee-form {
+  background: #ffffff;
+  width: 100%;
+  max-width: 520px;
+  padding: 28px;
+  border-radius: 12px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+}
+
+.employee-form-title {
+  font-size: 22px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 24px;
+  color: #111827;
+}
+
+/* Form fields */
+.employee-form-group {
+  margin-bottom: 18px;
+}
+
+.employee-input {
+  width: 100%;
+  padding: 12px 14px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  transition: all 0.2s ease;
+}
+
+.employee-input::placeholder {
+  color: #9ca3af;
+}
+
+.employee-input:focus {
+  outline: none;
+  border-color: #1e6475;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+}
+
+/* Submit button */
+.employee-submit-btn {
+  width: 10%;
+  padding: 12px;
+  margin-top: 10px;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background-color: #111827;
+  color: white;
+  transition: background-color 0.2s ease;
+}
+
+.employee-submit-btn:hover {
+  background-color: #1b2336;
+}
